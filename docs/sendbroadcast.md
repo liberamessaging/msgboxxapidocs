@@ -36,23 +36,23 @@ Next we need the details of the contact we are going to send it to. To retrieve 
 
 which will return the following
 
-`HTTP 200 OK 
-{
-  "items": [
+    HTTP 200 OK 
     {
-      "contactId": "17b5c90a-7465-1097-b2db-66afa62c963f",
-      "mobileNumber": "+447902111123",
-      "name": "Test Customer",
-      "status": "Subscribed",
-      "email": "customer@somewhere.com",
-      "apiAccountid": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "datetime": "2022-07-05T20:09:58.341Z"
+      "items": [
+        {
+          "contactId": "17b5c90a-7465-1097-b2db-66afa62c963f",
+          "mobileNumber": "+447902111123",
+          "name": "Test Customer",
+          "status": "Subscribed",
+          "email": "customer@somewhere.com",
+          "apiAccountid": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "datetime": "2022-07-05T20:09:58.341Z"
+        }
+      ],
+      "paging": {
+        "recordCount": 1
+      }
     }
-  ],
-  "paging": {
-    "recordCount": 1
-  }
-}
 
 Keep a note of the contactId returned.
 
@@ -70,7 +70,8 @@ To get the list of templates on the system
 
 will return the following
 
-`{
+`HTTP 200 OK
+{
   "items": [
     {
       "templateId": "0bbadd13-0e3f-4ebb-9f65-9e6ee460d7ba",
@@ -102,7 +103,7 @@ with the following body
 
 which will return the following
 
-'HTTP 200 OK
+`HTTP 201 CREATED
 {
   "broadcastId": "d81eba15-3983-437a-9f8c-1ff1c79686ed",
   "apiAccountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
@@ -111,7 +112,7 @@ which will return the following
   "message": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. ",
   "status": "Sent",
   "dateTime": "2022-07-05T20:13:22.263Z"
-}'
+}`
 
 Note due to the async nature of the platform you will always be returned the broadcastId, but not always get the messageId, nessage and status fields until the message is actually sent.
 
