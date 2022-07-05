@@ -36,23 +36,26 @@ Next we need the details of the contact we are going to send it to. To retrieve 
 
 which will return the following
 
-    HTTP 200 OK 
+`HTTP 200 OK`
+
+```json
+{
+  "items": [
     {
-      "items": [
-        {
-          "contactId": "17b5c90a-7465-1097-b2db-66afa62c963f",
-          "mobileNumber": "+447902111123",
-          "name": "Test Customer",
-          "status": "Subscribed",
-          "email": "customer@somewhere.com",
-          "apiAccountid": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-          "datetime": "2022-07-05T20:09:58.341Z"
-        }
-      ],
-      "paging": {
-        "recordCount": 1
-      }
+      "contactId": "17b5c90a-7465-1097-b2db-66afa62c963f",
+      "mobileNumber": "+447902111123",
+      "name": "Test Customer",
+      "status": "Subscribed",
+      "email": "customer@somewhere.com",
+      "apiAccountid": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "datetime": "2022-07-05T20:09:58.341Z"
     }
+  ],
+  "paging": {
+    "recordCount": 1
+  }
+}
+```
 
 Keep a note of the contactId returned.
 
