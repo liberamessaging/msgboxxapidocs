@@ -36,8 +36,15 @@ Upon a successful login you will receive the following response.
 
 the string in the access_token field is your Bearer token and is required to be passed to all subsequent calls. 
 
+All of the common scenarios below require you to have obtained a bearer token above, and send it through to all APi calls.
+Authorisation: Bearer mytokengoeshere
+
 ---
 
 # Common Scenarios
 
+WhatsApp support two different message sending scenarios. When a customer sends a message into msgboxx a window of 24 hours is open in which you can reply with a freeform (session) messages via the Message endpoint. If the customer engages in a conversation the window extends and only closes 24 hours after the last message received from them. When the session message window is closed then you need to send a template message via the Broadcast endpoint.
+
 ## Sending a Broadcast 
+
+To find out how to broadcast a message <a href="sendbroadcast">view the documentation here</a>
