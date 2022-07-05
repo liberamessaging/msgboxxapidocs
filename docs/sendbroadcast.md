@@ -13,7 +13,9 @@ First retrieve the api account that you are sending from.
 
 will return a list of all api accounts you have access to, in most cases this will be a list of one. 
 
-`HTTP 200 OK 
+`HTTP 200 OK`
+
+```json
 {
   "items": [
     {
@@ -26,7 +28,8 @@ will return a list of all api accounts you have access to, in most cases this wi
   "paging": {
     "recordCount": 1
   }
-}`
+}
+```
 
 In order to send the broadcast you will require the apiAccountId guid above. 
 
@@ -73,7 +76,9 @@ To get the list of templates on the system
 
 will return the following
 
-`HTTP 200 OK
+`HTTP 200 OK`
+
+```json
 {
   "items": [
     {
@@ -89,7 +94,8 @@ will return the following
   "paging": {
     "recordCount": 1
   }
-}`
+}
+```
 
 Now we have the templates we can perform any placeholder replacements required, and send the template message.
 
@@ -97,16 +103,20 @@ Now we have the templates we can perform any placeholder replacements required, 
 
 with the following body
 
-`{
+```json
+{
   "apiAccountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
   "contactId": "17b5c90a-7465-1097-b2db-66afa62c963f",
   "templateId": "0bbadd13-0e3f-4ebb-9f65-9e6ee460d7ba",
   "message": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. "
-}`
+}
+```
 
 which will return the following
 
-`HTTP 201 CREATED
+`HTTP 201 CREATED`
+
+```json
 {
   "broadcastId": "d81eba15-3983-437a-9f8c-1ff1c79686ed",
   "apiAccountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
@@ -115,9 +125,10 @@ which will return the following
   "message": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. ",
   "status": "Sent",
   "dateTime": "2022-07-05T20:13:22.263Z"
-}`
+}
+```
 
-Note due to the async nature of the platform you will always be returned the broadcastId, but not always get the messageId, nessage and status fields until the message is actually sent.
+Note due to the asynchronous nature of the platform you will always be returned the broadcastId, but not always get the messageId, nessage and status fields until the message is actually sent.
 
 To check on the status of your broadcast message you can perform the following which wil return the same data as above.
 
