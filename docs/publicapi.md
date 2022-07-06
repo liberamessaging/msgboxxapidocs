@@ -11,7 +11,7 @@ The full swagger documentation of all api endpoints inputs and outputs is availa
 
 ---
 
-Before you can use any of our public API endpoints you will need to get a Bearer token from our authentication endpoint. All authentication is on the basis of a msgboxx user and the permissions you get in the api are exactly the same as if the user logged directly into the msgboxx platform. 
+Before you can use any of our public API endpoints you will need to get a Bearer token from our authentication endpoint. All authentication is on the basis of a msgboxx user and the permissions you get in the api are exactly the same as if the user logged directly into the msgboxx platform.
 
 To obtain a JWT token perform a HTTP post against the Auth endpoint.
 
@@ -19,22 +19,27 @@ To obtain a JWT token perform a HTTP post against the Auth endpoint.
 
 with the following body
 
-`{
+```json
+{
   "username": "myuser@domain.com",
   "password": "mypassw0rd!"
-}`
+}
+```
 
 Upon a successful login you will receive the following response.
 
-`HTTP 200 OK
+`HTTP 200 OK`
+
+```json
 {
   "access_token": "string",
   "token_type": "string",
   "scope": "string",
   "expires_at": "string"
-}`
+}
+```
 
-the string in the access_token field is your Bearer token and is required to be passed to all subsequent calls. 
+the string in the access_token field is your Bearer token and is required to be passed to all subsequent calls.
 
 All of the common scenarios below require you to have obtained a bearer token above, and send it through to all APi calls.
 Authorisation: Bearer mytokengoeshere
@@ -45,6 +50,10 @@ Authorisation: Bearer mytokengoeshere
 
 WhatsApp support two different message sending scenarios. When a customer sends a message into msgboxx a window of 24 hours is open in which you can reply with a freeform (session) messages via the Message endpoint. If the customer engages in a conversation the window extends and only closes 24 hours after the last message received from them. When the session message window is closed then you need to send a template message via the Broadcast endpoint.
 
-## Sending a Broadcast 
+## Sending a Broadcast
 
 To find out how to broadcast a message <a href="sendbroadcast">view the documentation here</a>
+
+## Sending a Session Message
+
+To find out how to send a session message <a href="sendmessage">view the documentation here</a>
