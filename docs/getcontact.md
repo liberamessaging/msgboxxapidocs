@@ -1,9 +1,9 @@
 ---
-title: Get A Contact
+title: Get a Contact
 layout: default
 ---
 
-## Get Contacts
+## Get a Contact
 
 To retrieve a single contact you will need to already know the contactId from a previous search. 
 
