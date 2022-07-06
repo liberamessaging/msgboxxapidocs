@@ -50,10 +50,12 @@ Authorisation: Bearer mytokengoeshere
 
 WhatsApp support two different message sending scenarios. When a customer sends a message into msgboxx a window of 24 hours is open in which you can reply with a freeform (session) messages via the Message endpoint. If the customer engages in a conversation the window extends and only closes 24 hours after the last message received from them. When the session message window is closed then you need to send a template message via the Broadcast endpoint.
 
-## Sending a Broadcast
+## Sending a Session Messages & Broadcasts
 
 To find out how to broadcast a message <a href="sendbroadcast">view the documentation here</a>
-
-## Sending a Session Message
-
 To find out how to send a session message <a href="sendmessage">view the documentation here</a>
+
+## Working with API Accounts
+
+To find out how to get all the api accounts <a href="getapiaccounts">view the documentation here</a>
+To find out how to get a specific api account <a href="getapiaccount">view the documentation here</a>

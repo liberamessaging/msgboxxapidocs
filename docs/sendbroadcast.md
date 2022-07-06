@@ -64,11 +64,11 @@ Keep a note of the contactId returned.
 
 Then we need the template. Templates are configured on the system and have to be approved by WhatsApp. They are standard phrases which have placeholders in them which need to be replaced. You may have a template called follow_up which has the following text in it
 
-`Hi {{1}}, thanks for the conversation earlier about {{2}} lets catch up soon. `
+`{% raw  %}Hi {{1}}, thanks for the conversation earlier about {{2}} lets catch up soon.{% endraw %}`
 
 Which once the placeholders are replaced could look like
 
-`Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. `
+`{% raw  %}Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon.{% endraw %}`
 
 To get the list of templates on the system
 
@@ -86,8 +86,8 @@ will return the following
       "apiAccountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
       "status": "Approved",
       "name": "follow_up",
-      "templateText": "Hi {{1}}, thanks for the conversation earlier about {{2}} lets catch up soon.",
-      "templateExample": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. ",
+      "templateText": "{% raw  %}Hi {{1}}, thanks for the conversation earlier about {{2}} lets catch up soon.{% endraw %}",
+      "templateExample": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon.",
       "dateTime": "2022-07-05T20:13:22.260Z"
     }
   ],
