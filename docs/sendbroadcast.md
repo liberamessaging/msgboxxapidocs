@@ -64,11 +64,11 @@ Keep a note of the contactId returned.
 
 Then we need the template. Templates are configured on the system and have to be approved by WhatsApp. They are standard phrases which have placeholders in them which need to be replaced. You may have a template called follow_up which has the following text in it
 
-`Hi {{1}}, thanks for the conversation earlier about {{2}} lets catch up soon. `
+`{% raw  %}Hi {{1}}, thanks for the conversation earlier about {{2}} lets catch up soon.{% endraw %}`
 
 Which once the placeholders are replaced could look like
 
-`Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. `
+`{% raw  %}Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon.{% endraw %}`
 
 To get the list of templates on the system
 
@@ -86,8 +86,8 @@ will return the following
       "apiAccountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
       "status": "Approved",
       "name": "follow_up",
-      "templateText": "Hi {{1}}, thanks for the conversation earlier about {{2}} lets catch up soon.",
-      "templateExample": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. ",
+      "templateText": "{% raw  %}Hi {{1}}, thanks for the conversation earlier about {{2}} lets catch up soon.{% endraw %}",
+      "templateExample": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon.",
       "dateTime": "2022-07-05T20:13:22.260Z"
     }
   ],
@@ -108,7 +108,7 @@ with the following body
   "apiAccountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
   "contactId": "17b5c90a-7465-1097-b2db-66afa62c963f",
   "templateId": "0bbadd13-0e3f-4ebb-9f65-9e6ee460d7ba",
-  "message": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. "
+  "message": "Hi Jack, thanks for the conversation earlier about the 2 bedroom house in Swindon lets catch up soon."
 }
 ```
 
@@ -122,15 +122,15 @@ which will return the following
   "apiAccountId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
   "contactId": "17b5c90a-7465-1097-b2db-66afa62c963f",
   "messageId": "ce2400ec-f80a-4509-bcd3-5aa5a96a4bdf",
-  "message": "Hi John, thanks for the conversation earlier about the msgboxx platform lets catch up soon. ",
+  "message": "Hi Jack, thanks for the conversation earlier about the 2 bedroom house in Swindon lets catch up soon.",
   "status": "Sent",
   "dateTime": "2022-07-05T20:13:22.263Z"
 }
 ```
 
-Note due to the asynchronous nature of the platform you will always be returned the broadcastId, but not always get the messageId, nessage and status fields until the message is actually sent.
+Note due to the asynchronous nature of the platform you will always be returned the broadcastId, but not always get the messageId, message and status fields until the message is actually sent.
 
-To check on the status of your broadcast message you can perform the following which wil return the same data as above.
+To check on the status of your broadcast message you can perform the following which will return the same data as above.
 
 `GET https://api.msgboxx.io/broadcast/d81eba15-3983-437a-9f8c-1ff1c79686ed`
 
