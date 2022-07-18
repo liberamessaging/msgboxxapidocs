@@ -41,8 +41,9 @@ Upon a successful login you will receive the following response.
 
 the string in the access_token field is your Bearer token and is required to be passed to all subsequent calls.
 
-All of the common scenarios below require you to have obtained a bearer token above, and send it through to all APi calls.
-Authorisation: Bearer mytokengoeshere
+All of the common scenarios below require you to have obtained a bearer token above, and send it through to all API calls.
+
+`Authorisation: Bearer mytokengoeshere`
 
 ---
 
