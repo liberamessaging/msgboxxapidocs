@@ -92,3 +92,9 @@ To find out how to get all the messages <a href="getmessagees">view the document
 To find out how to get a specific message <a href="getmessage">view the documentation here</a>
 
 To find out how to send a new message <a href="sendmessage">view the documentation here</a>
+
+## Working with Templates
+
+To find out how to get all the templates <a href="gettemplates">view the documentation here</a>
+
+To find out how to get a specific template <a href="gettemplate">view the documentation here</a>
