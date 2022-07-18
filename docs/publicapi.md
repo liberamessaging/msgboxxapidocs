@@ -62,6 +62,12 @@ To find out how to get all the api accounts <a href="getapiaccounts">view the do
 
 To find out how to get a specific api account <a href="getapiaccount">view the documentation here</a>
 
+## Working with Inboxes
+
+To find out how to get all the inboxes <a href="getinboxes">view the documentation here</a>
+
+To find out how to get a specific inbox <a href="getinbox">view the documentation here</a>
+
 ## Working with Contacts
 
 To find out how to get all the contacts <a href="getcontacts">view the documentation here</a>
@@ -69,3 +75,19 @@ To find out how to get all the contacts <a href="getcontacts">view the documenta
 To find out how to get a specific contact <a href="getcontact">view the documentation here</a>
 
 To find out how to add a new contact <a href="addcontact">view the documentation here</a>
+
+## Working with Broadcasts
+
+To find out how to get all the broadcasts <a href="getbroadcasts">view the documentation here</a>
+
+To find out how to get a specific broadcast <a href="getbroadcast">view the documentation here</a>
+
+To find out how to send a new broadcast <a href="sendbroadcast">view the documentation here</a>
+
+## More Working with Messages
+
+To find out how to get all the messages <a href="getmessagees">view the documentation here</a>
+
+To find out how to get a specific message <a href="getmessage">view the documentation here</a>
+
+To find out how to send a new message <a href="sendmessage">view the documentation here</a>

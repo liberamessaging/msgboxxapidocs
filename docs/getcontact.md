@@ -7,9 +7,13 @@ layout: default
 
 To retrieve a single contact you will need to already know the contactId from a previous search. 
 
+`GET https://api.msgboxx.io/apiaccount/{apiAccountId}`
+
+for this example:
+
 `GET https://api.msgboxx.io/contact/a38f0fc8-cb26-4266-bbd9-35eb8dbd6947`
 
-which will return the list contact on the system. 
+which will return the contact on the system. 
 
 `HTTP 200 OK`
 

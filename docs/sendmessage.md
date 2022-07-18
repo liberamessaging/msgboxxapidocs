@@ -62,7 +62,7 @@ which will return the following
 
 Keep a note of the contactId returned.
 
-Now we have the detilas we can send the message
+Now we have the detials we can send the message
 
 `POST https://api.msgboxx.io/message`
 
