@@ -87,7 +87,7 @@ To find out how to send a new broadcast <a href="sendbroadcast">view the documen
 
 ## More Working with Messages
 
-To find out how to get all the messages <a href="getmessagees">view the documentation here</a>
+To find out how to get all the messages <a href="getmessages">view the documentation here</a>
 
 To find out how to get a specific message <a href="getmessage">view the documentation here</a>
 
